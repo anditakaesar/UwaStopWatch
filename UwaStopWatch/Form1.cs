@@ -45,12 +45,9 @@ namespace UwaStopWatch
         {
             StringBuilder sb = new StringBuilder();
 
-            int min = seconds / 60;
-            seconds = seconds % 60;
-
-            sb.Append(min.ToString("D3"))
+            sb.Append((seconds / 60).ToString("D3"))
                 .Append(":")
-                .Append(seconds.ToString("D2"));
+                .Append((seconds % 60).ToString("D2"));
 
             return sb.ToString();
         }
